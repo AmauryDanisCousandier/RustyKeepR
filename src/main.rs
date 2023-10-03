@@ -1,11 +1,12 @@
-struct Item {
-    name: String,
-    price: f64,
-    quantity: u32,
-}
+mod inventory;
 
 fn main() {
-    let _item = Item {
+    inventory::inventory::add_new_item();
+    inventory::inventory::remove_item();
+    inventory::inventory::display_inventory();
+    inventory::inventory::calculate_value();
+
+    let _item = inventory::Item {
         name: String::from("parsnip"),
         price: 5.99,
         quantity: 14,
